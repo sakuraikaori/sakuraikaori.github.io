@@ -7,7 +7,6 @@
 <body>
 
   <header>
-    <div>
       <ul>
         <li><a href="#">サイトマップ</a></li>
         <li><a href="#">お問い合わせ</a></li>
@@ -16,12 +15,10 @@
         <li><a href="#">Chinese(繁体)</a></li>
         <li><a href="#">Korean</a></li>
       </ul>
-    </div>
     <!-- header nav -->
 
     <h1><a href="index.html"><img src="img/logo.png" alt="logo"/></a></h1>
     <!-- site logo -->
-    <div>
       <nav>
         <ul>
           <li><a href="#">ホテルのこだわり<span>concept</span></a></li>
@@ -32,7 +29,6 @@
           <li><a href="#">アクセス<span>access</span></a></li>
         </ul>
       </nav>
-    </div>
     <!-- grobal nav -->
 
   </header>
@@ -42,27 +38,91 @@
     <img src="img/main01.jpg" alt="main_image01"/>
     <img src="img/main02.jpg" alt="main_image02"/>
     <img src="img/main03.jpg" alt="main_image03"/>
-  </div>
-
-  <div>
     <img src="img/wave.png" alt="wave_bg"/>
   </div>
 
-  <div>
-    <h2>宿泊予約</h2>
-    <span>Reservation</span>
-  </div>
+  <section>
+    <h2>宿泊予約<span>Reservation</span></h2>
 
-  <div>
-    <h2>特集</h2>
-    <span>Feature</span>
+    <form action="reserve.php">
+      スケジュール
+      <select name="yearmonth" id="yearmonth">
+        <option value="201505">2015年05月</option>
+        <option value="201506">2015年06月</option>
+        <option value="201507">2015年07月</option>
+      </select>
+
+      <select name="day" id="day">
+        <option value="1">1日</option>
+        <option value="2">2日</option>
+        <option value="3">3日</option>
+        <option value="4">4日</option>
+        <option value="5">5日</option>
+        <option value="6">6日</option>
+        <option value="7">7日</option>
+        <option value="8">8日</option>
+        <option value="9">9日</option>
+        <option value="10">10日</option>
+        <option value="11">11日</option>
+        <option value="12">12日</option>
+        <option value="13">13日</option>
+        <option value="14">14日</option>
+        <option value="15">15日</option>
+        <option value="16">16日</option>
+        <option value="17">17日</option>
+        <option value="18">18日</option>
+        <option value="19">19日</option>
+        <option value="20">20日</option>
+        <option value="21">21日</option>
+        <option value="22">22日</option>
+        <option value="23">23日</option>
+        <option value="24">24日</option>
+        <option value="25">25日</option>
+        <option value="26">26日</option>
+        <option value="27">27日</option>
+        <option value="28">28日</option>
+        <option value="29">29日</option>
+        <option value="30">30日</option>
+        <option value="31">31日</option>
+
+      </select>
+
+      <select name="stay" id="stay">
+        <option value="1">1泊</option>
+        <option value="2">2泊</option>
+        <option value="3">3泊</option>
+      </select>
+
+      <select name="people" id="people">
+        <option value="1">1人</option>
+        <option value="2">2人</option>
+        <option value="3">3人</option>
+        <option value="4">4人</option>
+        <option value="5">5人</option>
+        <option value="6">6人</option>
+        <option value="7">7人</option>
+        <option value="8">8人</option>
+      </select>
+
+      <select name="room" id="room">
+        <option value="1">1泊</option>
+        <option value="2">2泊</option>
+        <option value="3">3泊</option>
+      </select>
+
+      <input type="image" src="img/search.png" alt="検索">
+
+    </form>
+  </section>
+
+  <section>
+    <h2>特集<span>Feature</span></h2>
     <p><a href="#">一覧を見る</a></p>
     <a href="#"><img src="img/feature.jpg" alt="朝食特集"/></a>
-  </div>
+  </section>
 
-  <div>
-    <h2>トピックス</h2>
-    <span>Topics</span>
+  <section>
+    <h2>トピックス<span>Topics</span></h2>
     <p><a href="#">一覧を見る</a></p>
 
     <dl>
@@ -76,42 +136,41 @@
       <dt>2013/10/28</dt><dd>～2013クリスマスディナーのお知らせ～</dd>
       <dt>2013/10/20</dt><dd>【重要】法定点検による全館停電のお知らせ 2014年2月17日実施</dd>
     </dl>
-  </div>
+  </section>
 
-  <div>
-  <h2>宿泊プランから探す</h2>
-  <span>Stay Plan</span>
+  <section>
+  <h2>宿泊プランから探す<span>Stay Plan</span></h2>
   <p><a href="#">一覧を見る</a></p>
 
-  <div>
-      <a href="#"><img src="img/plan01.jpg" alt="朝食ビュッフェプラン"></a>
-      <div><h3>朝食ビュッフェプラン</h3><p>１日のはじまりを優雅に過ごす</p></div>
-    </div>
-    <div>
-      <a href="#"><img src="img/plan02.jpg" alt="女子会プラン"></a>
-      <div><h3>女子会プラン</h3><p>仲良しの仲間と楽しみたい！</p></div>
-    </div>
-    <div>
-      <a href="#"><img src="img/plan03.jpg" alt="早割プラン"></a>
-      <div><h3>早割プラン</h3><p>早起きの人向けのお得なプラン</p></div>
-    </div>
-    <div>
-      <a href="#"><img src="img/plan04.jpg" alt="スタンダードプラン"></a>
-      <div><h3>ビジネスプラン</h3><p>ビジネスマンにおすすめ</p></div>
-    </div>
-    <div>
-      <a href="#"><img src="img/plan05.jpg" alt="ファミリープラン"></a>
-      <div><h3>ファミリープラン</h3><p>レジャーでの宿泊におすすめ</p></div>
-    </div>
-    <div>
-      <a href="#"><img src="img/plan06.jpg" alt="カップルプラン"></a>
-      <div><h3>カップルプラン</h3><p>２人のための特別なプラン</p></div>
-    </div>
-  </div>
+  <section>
+
+        <a href="#"><img src="img/plan01.jpg" alt="朝食ビュッフェプラン"></a>
+        <h3>朝食ビュッフェプラン</h3><p>１日のはじまりを優雅に過ごす</p></section>
+
+      <section>
+        <a href="#"><img src="img/plan02.jpg" alt="女子会プラン"></a>
+        <h3>女子会プラン</h3><p>仲良しの仲間と楽しみたい！</p></section>
+
+      <section>
+        <a href="#"><img src="img/plan03.jpg" alt="早割プラン"></a>
+        <h3>早割プラン</h3><p>早起きの人向けのお得なプラン</p></section>
+
+      <section>
+        <a href="#"><img src="img/plan04.jpg" alt="スタンダードプラン"></a>
+        <h3>ビジネスプラン</h3><p>ビジネスマンにおすすめ</p></section>
+
+      <section>
+        <a href="#"><img src="img/plan05.jpg" alt="ファミリープラン"></a>
+        <h3>ファミリープラン</h3><p>レジャーでの宿泊におすすめ</p></section>
+
+      <section>
+        <a href="#"><img src="img/plan06.jpg" alt="カップルプラン"></a>
+        <h3>カップルプラン</h3><p>２人のための特別なプラン</p></section>
+
+  </section>
 
 <footer>
 
-  <div>
   <ul>
     <li><a href="#">ホテルのこだわり</a></li>
     <li><a href="#">ご宿泊</a></li>
@@ -140,7 +199,7 @@
     <li><a href="#"><img src="img/facebook.gif" alt="facebook">facebook</a></li>
   </ul>
   <img src="img/footer_bg.png" alt="footer_bg"/>
-  </div>
+
   <!-- sitemap -->
   <p class="copyright"><small>Copyright(c) RESORTTRUST All rights reserved.</small></p>
 </footer>
