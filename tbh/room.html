@@ -1,49 +1,102 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
   <meta charset="UTF-8">
   <title>TOKYO BAYSIDE HOTEL | 東京ベイサイドホテル</title>
+
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="js/jquery.bxslider.css" rel="stylesheet"/>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.fademover.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('.bxslider').bxSlider
+        ({
+      auto:true,
+      speed:1000,
+      pause:5000,
+      mode:'fade'
+      });
+      });
+
+// bxSlider //
+
+        $(document).ready(function() {
+        $("body").fadeMover({
+                'effectType': 2,
+                'inSpeed': 400,
+                'inDelay' : '0',
+                'outDelay' : '0',
+                'nofadeOut' : 'nonmover'
+                });
+                });
+
+// fadeMover //
+
+    </script>
 </head>
+
 <body>
 
+<div class="wrapper">
+
   <header>
-      <ul>
+    <div class="header-nav_bg">
+    <div class="header-nav">
+      <ul class="header-nav_01">
         <li><a href="#">サイトマップ</a></li>
         <li><a href="#">お問い合わせ</a></li>
+      </ul>
+      <ul class="header-nav_02">
         <li><a href="#">English</a></li>
         <li><a href="#">Chinese(簡体)</a></li>
         <li><a href="#">Chinese(繁体)</a></li>
         <li><a href="#">Korean</a></li>
       </ul>
-    <!-- header nav -->
+    </div>
+  </div>
 
-    <h1><a href="index.html"><img src="img/logo.png" alt="logo"/></a></h1>
-    <!-- site logo -->
-      <nav>
-        <ul>
-          <li><a href="#">ホテルのこだわり<span>concept</span></a></li>
-          <li><a href="#">ご宿泊<span>stay</span></a></li>
-          <li><a href="#">レストラン<span>restrant</span></a></li>
-          <li><a href="#">ウェディング<span>wedding</span></a></li>
-          <li><a href="#">フォトギャラリー<span>photogallery</span></a></li>
-          <li><a href="#">アクセス<span>access</span></a></li>
-        </ul>
-      </nav>
-    <!-- grobal nav -->
+<!-- header nav -->
+
+  <h1><a href="index.html"><img src="img/logo.png" alt="logo"/></a></h1>
+
+<!-- site logo -->
+    <ul class="gnav">
+      <li><a href="#">ホテルのこだわり<br><span>concept</span></a></li>
+      <li><a href="room.html">ご宿泊<br><span>stay</span></a></li>
+      <li><a href="#">レストラン<br><span>restrant</span></a></li>
+      <li><a href="#">ウェディング<br><span>wedding</span></a></li>
+      <li><a href="#">フォトギャラリー<br><span>photogallery</span></a></li>
+      <li><a href="#">アクセス<br><span>access</span></a></li>
+    </ul>
+<!-- grobal nav -->
 
   </header>
 
-  <ol>
-    <li>TOP</li>
-    <li>ご宿泊</li>
-    <li>シングルルーム</li>
+
+  <ol class="pankuzu">
+    <li><a href="index.html">TOP</a></li>
+    <li><a href="#">ご宿泊</a></li>
+    <li><a href="#">シングルルーム</a></li>
   </ol>
 
-  <section>
+<!-- pankuzu -->
 
-  <h2>シングルルーム<span>Single Room</span></h2>
 
-    <nav>
+  <div class="single-room_wrap">
+
+    <section class="room_title">
+      <h2>シングルルーム<span>Single Room</span></h2>
+    </section>
+
+<!-- room title -->
+
+    <nav class="room_nav">
       <ul>
         <li><a href="#">シングルルーム</a></li>
         <li><a href="#">ダブルルーム</a></li>
@@ -52,222 +105,335 @@
       </ul>
     </nav>
 
-  <div>
-    <img src="img/room01.jpg" alt="single_room01"/>
-    <img src="img/room_thumb01.jpg" alt="single_room_thumb01"/>
-    <img src="img/room_thumb02.jpg" alt="single_room_thumb02"/>
-    <img src="img/room_thumb03.jpg" alt="single_room_thumb03"/>
-    <img src="img/room_thumb04.jpg" alt="single_room_thumb04"/>
+<!-- room nav -->
+
+  <div class="single-room_content">
+    <div class="room_left_column">
+
+      <ul class="room_image">
+        <li><img src="img/room01.jpg" alt="single_room01"/></li>
+        <li><a href="#"><img src="img/room_thumb01.jpg" alt="single_room_thumb01"/></a></li>
+        <li><a href="#"><img src="img/room_thumb02.jpg" alt="single_room_thumb02"/></a></li>
+        <li><a href="#"><img src="img/room_thumb03.jpg" alt="single_room_thumb03"/></a></li>
+        <li><a href="#"><img src="img/room_thumb04.jpg" alt="single_room_thumb04"/></a></li>
+      </ul>
+
+<!-- room images -->
+
+  <section class="room_text">
+    <h3>スタンダードシングル</h3>
+      <p>スタイリッシュで優れた快適性を感じられるインテリアは、ビジネスユースに最適です。</p>
+  </section>
+
+  <section class="room_text">
+    <h3>スーベリアシングル</h3>
+      <p >ニューヨークモダンな空間と大きなベッドは深い眠りへと導いてくれます。</p>
+  </section>
+
+  <section class="room_text amenity_wrap">
+    <h3>アメニティ・設備・サービス</h3>
+      <div class="amenity">
+
+        <ul class="amenity01">
+          <li>シャワートイレ</li>
+          <li>ユニットバス内電話</li>
+          <li>冷蔵庫</li>
+          <li>イオンドライヤー</li>
+          <li>ズボンプレッサー</li>
+          <li>高速インターネット通信回線（無料）</li>
+          <li>ビデオ・オン・デマンド（有料）</li>
+          <li>液晶テレビ</li>
+          <li>各フロアにベンダーコーナーあり</li>
+        </ul>
+
+        <ul class="amenity02">
+          <li>ランドリー</li>
+            <li>
+              <ul>
+                <li>・時間：午前10時までの集荷</li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>→当日夕刻のお渡し</li>
+              </ul>
+            </li>
+          <li>・午前10時以降の場合</li>
+            <li>
+              <ul>
+                <li>→翌日昼のお渡し※日曜日休み。</li>
+              </ul>
+            </li>
+          <li>マッサージ</li>
+            <li>
+              <ul>
+                <li>・午後7時～午前2時まで受付。</li>
+              </ul>
+            </li>
+          </ul>
+
+        <ul class="amenity03">
+          <li>インターネット</li>
+            <li>
+              <ul>
+                <li>・高速インターネット回線を全客室に完備。</li>
+              </ul>
+            </li>
+          <li>ビデオ・オン・デマンド</li>
+            <li>
+              <ul>
+                <li>お好きな時間に各種ビデオをはじめ、最新ムービーまでお楽しみいただける映像配信システムです。</li>
+              </ul>
+            </li>
+          <li>
+            <ul>
+              <li>プリペードカード　1,000円</li>
+            </ul>
+          </li>
+        </ul>
+
+      </div>
+
+<!-- amenity -->
+
+  </section>
+</div>
+
+<!-- room_left_column -->
+
+
+  <div class="room_right_column">
+    <div class="room_reservation">
+      <div class="room_reservation_container">
+        <div class="room_reservation_h2"><!-- 宿泊予約<span>Reservation</span> --></div>
+
+          <div class="room_reservation_form">
+
+            <form action="reserve.php">
+              <p class="room_schedule_p">スケジュール<br></p>
+              <select name="yearmonth" id="yearmonth" class="room_form_child">
+                <option value="201505">2015年05月</option>
+                <option value="201506">2015年06月</option>
+                <option value="201507">2015年07月</option>
+              </select>
+
+              <select name="day" id="day" class="room_form_child">
+                <option value="1">1日</option>
+                <option value="2">2日</option>
+                <option value="3">3日</option>
+                <option value="4">4日</option>
+                <option value="5">5日</option>
+                <option value="6">6日</option>
+                <option value="7">7日</option>
+                <option value="8">8日</option>
+                <option value="9">9日</option>
+                <option value="10">10日</option>
+                <option value="11">11日</option>
+                <option value="12">12日</option>
+                <option value="13">13日</option>
+                <option value="14">14日</option>
+                <option value="15">15日</option>
+                <option value="16">16日</option>
+                <option value="17">17日</option>
+                <option value="18">18日</option>
+                <option value="19">19日</option>
+                <option value="20">20日</option>
+                <option value="21">21日</option>
+                <option value="22">22日</option>
+                <option value="23">23日</option>
+                <option value="24">24日</option>
+                <option value="25">25日</option>
+                <option value="26">26日</option>
+                <option value="27">27日</option>
+                <option value="28">28日</option>
+                <option value="29">29日</option>
+                <option value="30">30日</option>
+                <option value="31">31日</option>
+
+              </select>
+
+              <br>
+
+              <select name="stay" id="stay" class="room_form_child">
+                <option value="1">1泊</option>
+                <option value="2">2泊</option>
+                <option value="3">3泊</option>
+              </select>
+
+              <select name="people" id="people" class="room_form_child">
+                <option value="1">1人</option>
+                <option value="2">2人</option>
+                <option value="3">3人</option>
+                <option value="4">4人</option>
+                <option value="5">5人</option>
+                <option value="6">6人</option>
+                <option value="7">7人</option>
+                <option value="8">8人</option>
+              </select>
+
+              <select name="room" id="room" class="room_form_child">
+                <option value="1">1部屋</option>
+                <option value="2">2部屋</option>
+                <option value="3">3部屋</option>
+              </select>
+
+                <input  class="room_search" type="image" src="img/search.png" alt="検索">
+            </form>
+
+            </div>
+          <div class="room_reservation_cancel">
+            <a href="#">予約確認・変更・取消</a>
+        </div>
+
+        <nav class="room_stay_nav">
+          <h2>ご宿泊<span>Stay</span></h2>
+            <ul class="room_stay_nav_ul">
+              <li><a href="#">ルームトップ</a></li>
+              <li><a href="#">シングルルーム</a></li>
+              <li><a href="#">ダブルルーム</a></li>
+              <li><a href="#">ツインルーム</a></li>
+              <li><a href="#">スウィートルーム</a></li>
+            </ul>
+        </nav>
+
+        <div>
+          <table class="room_table">
+            <tr>
+              <th class="room_table_color01">タイプ</th>
+              <th class="room_table_color01">室面積(m2)</th>
+              <th class="room_table_color01">ベッド幅(mm)</th>
+              <th class="room_table_color01">通常料金</th>
+            </tr>
+            <tr>
+              <td class="room_table_color01">スタンダード</td>
+              <td class="room_table_color02">約14</td>
+              <td class="room_table_color02">1,300</td>
+              <td class="room_table_color02">¥11,481〜(¥12,400)</td>
+            </tr>
+            <tr>
+              <td class="room_table_color01">スーベリア</td>
+              <td class="room_table_color02">約15〜16</td>
+              <td class="room_table_color02">1,400</td>
+              <td class="room_table_color02">¥12,500〜(¥13,500)</td>
+            </tr>
+          </table>
+        </div>
+
+        <div class="room_table_p">
+          <p>※表示料金は基本料金となります。
+            ホテルが指定する特定日には料金を変更させていただく場合がございますので、
+            ご予約の際にご確認ください。<br>
+            ※宿泊税が別途かかります。</p>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
-  <section>
-    <h3>スタンダードシングル</h3>
-    <p>スタイリッシュで優れた快適性を感じられるインテリアは、ビジネスユースに最適です。</p>
-  </section>
-  <section>
-    <h3>スーベリアシングル</h3>
-    <p>ニューヨークモダンな空間と大きなベッドは深い眠りへと導いてくれます。</p>
-  </section>
+<!-- room page -->
 
-  <section>
-  <h3>アメニティ・設備・サービス</h3>
+<footer class="footer">
 
-  <ul>
-    <li>シャワートイレ</li>
-    <li>ユニットバス内電話</li>
-    <li>冷蔵庫</li>
-    <li>イオンドライヤー</li>
-    <li>ズボンプレッサー</li>
-    <li>高速インターネット通信回線（無料）</li>
-    <li>ビデオ・オン・デマンド（有料）</li>
-    <li>液晶テレビ</li>
-    <li>各フロアにベンダーコーナーあり</li>
-    <li>ランドリー</li>
-      <li><ul><li>・時間：午前10時までの集荷</li></ul></li>
-      <li><ul><li>→当日夕刻のお渡し</li></ul></li>
-    <li>・午前10時以降の場合</li>
-      <li><ul><li>→翌日昼のお渡し※日曜日休み。</li></ul></li>
-    <li>マッサージ</li>
-      <li><ul><li>・午後7時～午前2時まで受付。</li></ul></li>
-    <li>インターネット</li>
-      <li><ul><li>・高速インターネット回線を全客室に完備。</li></ul></li>
-    <li>ビデオ・オン・デマンド</li>
-      <li><ul><li>お好きな時間に各種ビデオをはじめ、最新ムービーまでお楽しみいただける映像配信システムです。</li></ul></li>
-      <li><ul><li>プリペードカード　1,000円</li></ul></li>
+<div class="sitemap">
+  <ul class="sitemap01">
+    <li>
+      <dl>
+        <dt><a href="#">ホテルのこだわり</a></dt>
+        <dd></dd>
+      </dl>
+    </li>
+    <li>
+      <dl>
+        <dt><a href="#">ご宿泊</a></dt>
+        <dd><a href="#">客室</a></dd>
+        <dd><a href="#">プラン</a></dd>
+      </dl>
+    </li>
+  </ul>
+  <ul class="sitemap02">
+    <li>
+      <dl>
+        <dt><a href="#">レストラン</a></dt>
+        <dd><a href="#">おすすめメニュー</a></dd>
+        <dd><a href="#">朝食</a></dd>
+        <dd><a href="#">ランチ</a></dd>
+        <dd><a href="#">ディナー</a></dd>
+        <dd><a href="#">ティータイム</a></dd>
+      </dl>
+    </li>
+  </ul>
+  <ul class="sitemap03">
+    <li>
+      <dl>
+        <dt><a href="#">ウェディング</a></dt>
+        <dd></dd>
+      </dl>
+    </li>
+    <li>
+      <dl>
+        <dt><a href="#">フォトギャラリー</a></dt>
+        <dd></dd>
+      </dl>
+    </li>
+    <li>
+      <dl>
+        <dt><a href="#">アクセス</a></dt>
+        <dd><a href="#">マップ</a></dd>
+        <dd><a href="#">観光案内</a></dd>
+      </dl>
+    </li>
+  </ul>
+  <ul class="sitemap04">
+    <li>
+      <dl>
+        <dt><a href="#">その他</a></dt>
+        <dd><a href="#">サイトマップ</a></dd>
+        <dd><a href="#">会社概要</a></dd>
+        <dd><a href="#">プライバシーポリシー</a></dd>
+        <dd><a href="#">企業・採用情報</a></dd>
+        <dd><a href="#">よくある質問</a></dd>
+        <dd><a href="#">お問い合わせ</a></dd>
+      </dl>
+    </li>
+  </ul>
+  <ul class="sitemap05">
+    <li>
+      <dl>
+        <dt><a href="#">SNS 公式アカウント</a></dt>
+        <dd><a href="#"><img src="img/twitter.gif" alt="twitter">　twitter</a></dd>
+        <dd><a href="#"><img src="img/facebook.gif" alt="facebook">　facebook</a></dd>
+      </dl>
+    </li>
+    <li class="address">
+      ホテルトラスティ東京ベイサイド<br>
+      〒135-0063<br>
+      東京都江東区有明3-1-15<br>
+      TEL：03-6700-0001<br>
+      FAX：03-6700-0007
+    </li>
   </ul>
 
-</section>
+    </div>
 
-  </section>
+<!-- sitemap -->
 
-  <section>
-    <h2>宿泊予約<span>Reservation</span></h2>
+<p class="copyright"><small>Copyright &copy; RESORTTRUST All rights reserved.</small></p>
 
-    <form action="reserve.php">
-      スケジュール
-      <select name="yearmonth" id="yearmonth">
-        <option value="201505">2015年05月</option>
-        <option value="201506">2015年06月</option>
-        <option value="201507">2015年07月</option>
-      </select>
+</footer>
 
-      <select name="day" id="day">
-        <option value="1">1日</option>
-        <option value="2">2日</option>
-        <option value="3">3日</option>
-        <option value="4">4日</option>
-        <option value="5">5日</option>
-        <option value="6">6日</option>
-        <option value="7">7日</option>
-        <option value="8">8日</option>
-        <option value="9">9日</option>
-        <option value="10">10日</option>
-        <option value="11">11日</option>
-        <option value="12">12日</option>
-        <option value="13">13日</option>
-        <option value="14">14日</option>
-        <option value="15">15日</option>
-        <option value="16">16日</option>
-        <option value="17">17日</option>
-        <option value="18">18日</option>
-        <option value="19">19日</option>
-        <option value="20">20日</option>
-        <option value="21">21日</option>
-        <option value="22">22日</option>
-        <option value="23">23日</option>
-        <option value="24">24日</option>
-        <option value="25">25日</option>
-        <option value="26">26日</option>
-        <option value="27">27日</option>
-        <option value="28">28日</option>
-        <option value="29">29日</option>
-        <option value="30">30日</option>
-        <option value="31">31日</option>
-
-      </select>
-
-      <select name="stay" id="stay">
-        <option value="1">1泊</option>
-        <option value="2">2泊</option>
-        <option value="3">3泊</option>
-      </select>
-
-      <select name="people" id="people">
-        <option value="1">1人</option>
-        <option value="2">2人</option>
-        <option value="3">3人</option>
-        <option value="4">4人</option>
-        <option value="5">5人</option>
-        <option value="6">6人</option>
-        <option value="7">7人</option>
-        <option value="8">8人</option>
-      </select>
-
-      <select name="room" id="room">
-        <option value="1">1泊</option>
-        <option value="2">2泊</option>
-        <option value="3">3泊</option>
-      </select>
-
-      <input type="image" src="img/search.png" alt="検索">
-
-    </form>
-    <a href="#">予約確認・取消</a>
-  </section>
-
-    <nav>
-      <h2>ご宿泊<span>Stay</span></h2>
-      <ul>
-        <li><a href="#">ルームトップ</a></li>
-        <li><a href="#">シングルルーム</a></li>
-        <li><a href="#">ダブルルーム</a></li>
-        <li><a href="#">ツインルーム</a></li>
-        <li><a href="#">スウィートルーム</a></li>
-      </ul>
-    </nav>
-
-  <div>
-    <table>
-      <tr>
-      <th>タイプ</th>
-      <th>室面積(m2)</th>
-      <th>ベッド幅(mm)</th>
-      <th>通常料金</th>
-      </tr>
-      <tr>
-      <td>スタンダード</td>
-      <td>約14</td>
-      <td>1,300</td>
-      <td>¥11,481〜(¥12,400)</td>
-      </tr>
-      <tr>
-      <td>スーベリア</td>
-      <td>約15〜16</td>
-      <td>1,400</td>
-      <td>¥12,500〜(¥13,500)</td>
-      </tr>
-    </table>
+    </div>
   </div>
+</div>
 
-  <div>
-    <p>※表示料金は基本料金となります。<br>
-      ホテルが指定する特定日には料金を変更させていただく場合がございますので、
-      ご予約の際にご確認ください。<br>
-      ※宿泊税が別途かかります。</p>
-  </div>
+</body>
+</html>
 
-  <footer>
-
-    <ul>
-      <li>
-        <a href="#">ホテルのこだわり</a>
-      </li>
-      <li><dl>
-        <dt><a href="#">ご宿泊</a></dt>
-          <dd><a href="#">客室</a></dd>
-          <dd><a href="#">プラン</a></dd>
-      </dl></li>
-      <li><dl>
-        <dt><a href="#">レストラン</a></dt>
-          <dd><a href="#">おすすめメニュー</a></dd>
-          <dd><a href="#">朝食</a></dd>
-          <dd><a href="#">ランチ</a></dd>
-          <dd><a href="#">ディナー</a></dd>
-          <dd><a href="#">ティータイム</a></dd>
-      </dl></li>
-      <li>
-        <a href="#">ウェディング</a>
-      </li>
-      <li>
-        <a href="#">フォトギャラリー</a>
-      </li>
-      <li><dl>
-        <dt><a href="#">アクセス</a></dt>
-          <dd><a href="#">マップ</a></dd>
-          <dd><a href="#">観光案内</a></dd>
-      </dl></li>
-      <li><dl>
-        <dt><a href="#">その他</a></dt>
-          <dd><a href="#">サイトマップ</a></dd>
-          <dd><a href="#">会社概要</a></dd>
-          <dd><a href="#">プライバシーポリシー</a></dd>
-          <dd><a href="#">企業・採用情報</a></dd>
-          <dd><a href="#">よくある質問</a></dd>
-          <dd><a href="#">お問い合わせ</a></dd>
-      </dl></li>
-      <li><dl>
-        <dt><a href="#">SNS 公式アカウント</a></dt>
-          <dd><a href="#"><img src="img/twitter.gif" alt="twitter">twitter</a></dd>
-          <dd><a href="#"><img src="img/facebook.gif" alt="facebook">facebook</a></dd>
-      </dl></li>
-    </ul>
-    <p>ホテルトラスティ東京ベイサイド<br>〒135-0063<br>東京都江東区有明3-1-15<br>TEL：03-6700-0001<br>FAX：03-6700-0007</p>
-    <img src="img/footer_bg.png" alt="footer_bg"/>
-
-    <!-- sitemap -->
-    <p class="copyright"><small>Copyright &copy; RESORTTRUST All rights reserved.</small></p>
-  </footer>
-
-
-  </body>
-  </html>
+<!--
+    ∧＿∧
+   (・∀・)／＼
+  ノ つ つ ● )
+ ⊂、　ノ　＼／
+  し′
+  Thank you for your checking HTML!
+-->

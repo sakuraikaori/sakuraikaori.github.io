@@ -1,235 +1,354 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+
   <meta charset="UTF-8">
   <title>TOKYO BAYSIDE HOTEL | 東京ベイサイドホテル</title>
+
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="js/jquery.bxslider.css" rel="stylesheet"/>
+
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/jquery.bxslider.min.js"></script>
+    <script src="js/jquery.fademover.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        $('.bxslider').bxSlider
+        ({
+      auto:true,
+      speed:1000,
+      pause:5000,
+      mode:'fade'
+      });
+      });
+
+// bxSlider //
+
+        $(document).ready(function() {
+        $("body").fadeMover({
+                'effectType': 2,
+                'inSpeed': 400,
+                'inDelay' : '0',
+                'outDelay' : '0',
+                'nofadeOut' : 'nonmover'
+                });
+                });
+
+// fadeMover //
+
+    </script>
 </head>
+
 <body>
 
+<div class="wrapper">
+
   <header>
-      <ul>
+    <div class="header-nav_bg">
+    <div class="header-nav">
+      <ul class="header-nav_01">
         <li><a href="#">サイトマップ</a></li>
         <li><a href="#">お問い合わせ</a></li>
+      </ul>
+      <ul class="header-nav_02">
         <li><a href="#">English</a></li>
         <li><a href="#">Chinese(簡体)</a></li>
         <li><a href="#">Chinese(繁体)</a></li>
         <li><a href="#">Korean</a></li>
       </ul>
-    <!-- header nav -->
+    </div>
+  </div>
 
-    <h1><a href="index.html"><img src="img/logo.png" alt="logo"/></a></h1>
-    <!-- site logo -->
-      <nav>
-        <ul>
-          <li><a href="#">ホテルのこだわり<span>concept</span></a></li>
-          <li><a href="#">ご宿泊<span>stay</span></a></li>
-          <li><a href="#">レストラン<span>restrant</span></a></li>
-          <li><a href="#">ウェディング<span>wedding</span></a></li>
-          <li><a href="#">フォトギャラリー<span>photogallery</span></a></li>
-          <li><a href="#">アクセス<span>access</span></a></li>
-        </ul>
-      </nav>
-    <!-- grobal nav -->
+<!-- header nav -->
+
+  <h1><a href="index.html"><img src="img/logo.png" alt="logo"/></a></h1>
+
+<!-- site logo -->
+    <ul class="gnav">
+      <li><a href="#">ホテルのこだわり<br><span>concept</span></a></li>
+      <li><a href="room.html">ご宿泊<br><span>stay</span></a></li>
+      <li><a href="#">レストラン<br><span>restrant</span></a></li>
+      <li><a href="#">ウェディング<br><span>wedding</span></a></li>
+      <li><a href="#">フォトギャラリー<br><span>photogallery</span></a></li>
+      <li><a href="#">アクセス<br><span>access</span></a></li>
+    </ul>
+<!-- grobal nav -->
 
   </header>
 
   <div>
-    <ul>
-        <!--img src="img/wave_white.png" alt="carousel_bg"-->
-      <li>
-        <img src="img/main01.jpg" alt="main_image01"/>
-      </li>
-      <li>
-        <img src="img/main02.jpg" alt="main_image02"/>
-      </li>
-      <li>
-        <img src="img/main03.jpg" alt="main_image03"/>
-      </li>
-      <!--img src="img/wave.png" alt="wave_bg"/-->
+    <div class="mask"></div>
+
+    <ul class="bxslider">
+      <li><img src="img/main01.jpg" alt="main_image01"/></li>
+      <li><img src="img/main02.jpg" alt="main_image02"/></li>
+      <li><img src="img/main03.jpg" alt="main_image03"/></li>
     </ul>
   </div>
 
-  <section>
-    <h2>宿泊予約<span>Reservation</span></h2>
+<!-- main visual  -->
 
-    <form action="reserve.php">
-      スケジュール
-      <select name="yearmonth" id="yearmonth">
-        <option value="201505">2015年05月</option>
-        <option value="201506">2015年06月</option>
-        <option value="201507">2015年07月</option>
-      </select>
+  <div class="reservation">
+    <section class="reservation_container">
+      <h2 class="reservation_h2">宿泊予約    <span>Reservation</span></h2>
 
-      <select name="day" id="day">
-        <option value="1">1日</option>
-        <option value="2">2日</option>
-        <option value="3">3日</option>
-        <option value="4">4日</option>
-        <option value="5">5日</option>
-        <option value="6">6日</option>
-        <option value="7">7日</option>
-        <option value="8">8日</option>
-        <option value="9">9日</option>
-        <option value="10">10日</option>
-        <option value="11">11日</option>
-        <option value="12">12日</option>
-        <option value="13">13日</option>
-        <option value="14">14日</option>
-        <option value="15">15日</option>
-        <option value="16">16日</option>
-        <option value="17">17日</option>
-        <option value="18">18日</option>
-        <option value="19">19日</option>
-        <option value="20">20日</option>
-        <option value="21">21日</option>
-        <option value="22">22日</option>
-        <option value="23">23日</option>
-        <option value="24">24日</option>
-        <option value="25">25日</option>
-        <option value="26">26日</option>
-        <option value="27">27日</option>
-        <option value="28">28日</option>
-        <option value="29">29日</option>
-        <option value="30">30日</option>
-        <option value="31">31日</option>
+      <div class="reservation_form">
+        <form action="reserve.php">
+        スケジュール
+        <select name="yearmonth" id="yearmonth" class="form_child fmselect">
+          <option value="201505">2015年05月</option>
+          <option value="201506">2015年06月</option>
+          <option value="201507">2015年07月</option>
+        </select>
 
-      </select>
+        <select name="day" id="day" class="form_child">
+          <option value="1">1日</option>
+          <option value="2">2日</option>
+          <option value="3">3日</option>
+          <option value="4">4日</option>
+          <option value="5">5日</option>
+          <option value="6">6日</option>
+          <option value="7">7日</option>
+          <option value="8">8日</option>
+          <option value="9">9日</option>
+          <option value="10">10日</option>
+          <option value="11">11日</option>
+          <option value="12">12日</option>
+          <option value="13">13日</option>
+          <option value="14">14日</option>
+          <option value="15">15日</option>
+          <option value="16">16日</option>
+          <option value="17">17日</option>
+          <option value="18">18日</option>
+          <option value="19">19日</option>
+          <option value="20">20日</option>
+          <option value="21">21日</option>
+          <option value="22">22日</option>
+          <option value="23">23日</option>
+          <option value="24">24日</option>
+          <option value="25">25日</option>
+          <option value="26">26日</option>
+          <option value="27">27日</option>
+          <option value="28">28日</option>
+          <option value="29">29日</option>
+          <option value="30">30日</option>
+          <option value="31">31日</option>
 
-      <select name="stay" id="stay">
-        <option value="1">1泊</option>
-        <option value="2">2泊</option>
-        <option value="3">3泊</option>
-      </select>
+        </select>
 
-      <select name="people" id="people">
-        <option value="1">1人</option>
-        <option value="2">2人</option>
-        <option value="3">3人</option>
-        <option value="4">4人</option>
-        <option value="5">5人</option>
-        <option value="6">6人</option>
-        <option value="7">7人</option>
-        <option value="8">8人</option>
-      </select>
+        <select name="stay" id="stay">
+          <option value="1">1泊</option>
+          <option value="2">2泊</option>
+          <option value="3">3泊</option>
+        </select>
 
-      <select name="room" id="room">
-        <option value="1">1泊</option>
-        <option value="2">2泊</option>
-        <option value="3">3泊</option>
-      </select>
+        <select name="people" id="people">
+          <option value="1">1人</option>
+          <option value="2">2人</option>
+          <option value="3">3人</option>
+          <option value="4">4人</option>
+          <option value="5">5人</option>
+          <option value="6">6人</option>
+          <option value="7">7人</option>
+          <option value="8">8人</option>
+        </select>
 
-      <input type="image" src="img/search.png" alt="検索">
+        <select name="room" id="room">
+          <option value="1">1部屋</option>
+          <option value="2">2部屋</option>
+          <option value="3">3部屋</option>
+        </select>
+          <input  class="search" type="image" src="img/search.png" alt="検索">
+      </form>
+    </div>
 
-    </form>
-    <a href="#">予約確認・取消</a>
+    <div class="reservation_cancel">
+      <a href="#">予約確認・変更・取消</a>
+    </div>
+
+    </section>
+  </div>
+
+<!-- reservation -->
+
+  <div class="content">
+
+    <div class="left_column">
+
+      <div class="feature">
+        <section class="feature_text">
+          <h2>特集<span>Feature</span></h2>
+          <p class="list"><a href="#">一覧を見る</a></p>
+        </section>
+        <a href="#"><img src="img/feature.jpg" alt="朝食特集"/></a>
+      </div>
+
+<!-- feature -->
+
+        <section class="topics">
+
+          <h2>トピックス<span>Topics</span></h2>
+          <p class="list"><a href="#">一覧を見る</a></p>
+
+          <dl>
+            <dt>2015/02/01</dt>
+              <dd>改修工事終了のお知らせ</dd>
+
+            <dt>2015/01/29</dt>
+              <dd>ランチタイム　営業再開のご案内</dd>
+
+            <dt>2014/02/21</dt>
+              <dd>☆【4月1日より】無料送迎シャトル便が生まれ変わります☆</dd>
+
+            <dt>2014/02/11</dt>
+              <dd>☆ホームページからのご予約がお得☆</dd>
+
+            <dt>2014/12/31</dt>
+              <dd>年始シャトルバスのご案内</dd>
+
+            <dt>2013/11/27</dt><dd>2013⇒2014カウントダウンパーティ開催のお知らせ</dd>
+
+            <dt>2013/11/06</dt>
+              <dd>ラウンジマンスリーディナーイベント</dd>
+
+            <dt>2013/10/28</dt>
+              <dd>～2013クリスマスディナーのお知らせ～</dd>
+
+            <dt>2013/10/20</dt>
+              <dd>【重要】法定点検による全館停電のお知らせ 2014年2月17日実施</dd>
+          </dl>
+
+        </section>
+
+<!-- topics -->
+
+      </div>
+
+<!-- left_column -->
+
+        <section class="plan">
+          <h2>宿泊プランから探す<span>Stay Plan</span></h2>
+          <p class="list"><a href="#">一覧を見る</a></p>
+
+            <div class="plan_list">
+              <ul>
+                <li class="plan_box"><a href="#"><img src="img/plan01.png" alt="朝食ビュッフェプラン"></a></li>
+                <li class="plan_box"><a href="#"><img src="img/plan02.png" alt="女子会プラン"></a></li>
+                <li class="plan_box"><a href="#"><img src="img/plan03.png" alt="早割プラン"></a></li>
+                <li class="plan_box"><a href="#"><img src="img/plan04.png" alt="スタンダードプラン"></a></li>
+                <li class="plan_box"><a href="#"><img src="img/plan05.png" alt="ファミリープラン"></a></li>
+                <li class="plan_box"><a href="#"><img src="img/plan06.png" alt="カップルプラン"></a></li>
+              </ul>
+            </div>
+
+<!-- plan_list -->
+
   </section>
+<!-- content -->
 
-  <section>
-    <h2>特集<span>Feature</span></h2>
-    <p><a href="#">一覧を見る</a></p>
-    <a href="#"><img src="img/feature.jpg" alt="朝食特集"/></a>
-  </section>
+  <footer class="footer">
 
-  <section>
-    <h2>トピックス<span>Topics</span></h2>
-    <p><a href="#">一覧を見る</a></p>
-
-    <dl>
-      <dt>2015/02/01</dt><dd>改修工事終了のお知らせ</dd>
-      <dt>2015/01/29</dt><dd>ランチタイム　営業再開のご案内</dd>
-      <dt>2014/02/21</dt><dd>☆【4月1日より】無料送迎シャトル便が生まれ変わります☆</dd>
-      <dt>2014/02/11</dt><dd>☆ホームページからのご予約がお得☆</dd>
-      <dt>2014/12/31</dt><dd>年始シャトルバスのご案内</dd>
-      <dt>2013/11/27</dt><dd>2013⇒2014カウントダウンパーティ開催のお知らせ</dd>
-      <dt>2013/11/06</dt><dd>ラウンジマンスリーディナーイベント</dd>
-      <dt>2013/10/28</dt><dd>～2013クリスマスディナーのお知らせ～</dd>
-      <dt>2013/10/20</dt><dd>【重要】法定点検による全館停電のお知らせ 2014年2月17日実施</dd>
-    </dl>
-  </section>
-
-  <section>
-  <h2>宿泊プランから探す<span>Stay Plan</span></h2>
-  <p><a href="#">一覧を見る</a></p>
-
-  <section>
-
-        <a href="#"><img src="img/plan01.jpg" alt="朝食ビュッフェプラン"></a>
-        <h3>朝食ビュッフェプラン</h3><p>１日のはじまりを優雅に過ごす</p></section>
-
-      <section>
-        <a href="#"><img src="img/plan02.jpg" alt="女子会プラン"></a>
-        <h3>女子会プラン</h3><p>仲良しの仲間と楽しみたい！</p></section>
-
-      <section>
-        <a href="#"><img src="img/plan03.jpg" alt="早割プラン"></a>
-        <h3>早割プラン</h3><p>早起きの人向けのお得なプラン</p></section>
-
-      <section>
-        <a href="#"><img src="img/plan04.jpg" alt="スタンダードプラン"></a>
-        <h3>ビジネスプラン</h3><p>ビジネスマンにおすすめ</p></section>
-
-      <section>
-        <a href="#"><img src="img/plan05.jpg" alt="ファミリープラン"></a>
-        <h3>ファミリープラン</h3><p>レジャーでの宿泊におすすめ</p></section>
-
-      <section>
-        <a href="#"><img src="img/plan06.jpg" alt="カップルプラン"></a>
-        <h3>カップルプラン</h3><p>２人のための特別なプラン</p></section>
-
-  </section>
-
-  <footer>
-
-    <ul>
+  <div class="sitemap">
+    <ul class="sitemap01">
       <li>
-        <a href="#">ホテルのこだわり</a>
+        <dl>
+          <dt><a href="#">ホテルのこだわり</a></dt>
+          <dd></dd>
+        </dl>
       </li>
-      <li><dl>
-        <dt><a href="#">ご宿泊</a></dt>
+      <li>
+        <dl>
+          <dt><a href="#">ご宿泊</a></dt>
           <dd><a href="#">客室</a></dd>
           <dd><a href="#">プラン</a></dd>
-      </dl></li>
-      <li><dl>
-        <dt><a href="#">レストラン</a></dt>
+        </dl>
+      </li>
+    </ul>
+    <ul class="sitemap02">
+      <li>
+        <dl>
+          <dt><a href="#">レストラン</a></dt>
           <dd><a href="#">おすすめメニュー</a></dd>
           <dd><a href="#">朝食</a></dd>
           <dd><a href="#">ランチ</a></dd>
           <dd><a href="#">ディナー</a></dd>
           <dd><a href="#">ティータイム</a></dd>
-      </dl></li>
+        </dl>
+      </li>
+    </ul>
+    <ul class="sitemap03">
       <li>
-        <a href="#">ウェディング</a>
+        <dl>
+          <dt><a href="#">ウェディング</a></dt>
+          <dd></dd>
+        </dl>
       </li>
       <li>
-        <a href="#">フォトギャラリー</a>
+        <dl>
+          <dt><a href="#">フォトギャラリー</a></dt>
+          <dd></dd>
+        </dl>
       </li>
-      <li><dl>
-        <dt><a href="#">アクセス</a></dt>
+      <li>
+        <dl>
+          <dt><a href="#">アクセス</a></dt>
           <dd><a href="#">マップ</a></dd>
           <dd><a href="#">観光案内</a></dd>
-      </dl></li>
-      <li><dl>
-        <dt><a href="#">その他</a></dt>
+        </dl>
+      </li>
+    </ul>
+    <ul class="sitemap04">
+      <li>
+        <dl>
+          <dt><a href="#">その他</a></dt>
           <dd><a href="#">サイトマップ</a></dd>
           <dd><a href="#">会社概要</a></dd>
           <dd><a href="#">プライバシーポリシー</a></dd>
           <dd><a href="#">企業・採用情報</a></dd>
           <dd><a href="#">よくある質問</a></dd>
           <dd><a href="#">お問い合わせ</a></dd>
-      </dl></li>
-      <li><dl>
-        <dt><a href="#">SNS 公式アカウント</a></dt>
-          <dd><a href="#"><img src="img/twitter.gif" alt="twitter">twitter</a></dd>
-          <dd><a href="#"><img src="img/facebook.gif" alt="facebook">facebook</a></dd>
-      </dl></li>
+        </dl>
+      </li>
     </ul>
-    <p>ホテルトラスティ東京ベイサイド<br>〒135-0063<br>東京都江東区有明3-1-15<br>TEL：03-6700-0001<br>FAX：03-6700-0007</p>
-    <img src="img/footer_bg.png" alt="footer_bg"/>
+    <ul class="sitemap05">
+      <li>
+        <dl>
+          <dt><a href="#">SNS 公式アカウント</a></dt>
+          <dd><a href="#"><img src="img/twitter.gif" alt="twitter">　twitter</a></dd>
+          <dd><a href="#"><img src="img/facebook.gif" alt="facebook">　facebook</a></dd>
+        </dl>
+      </li>
+      <li class="address">
+        ホテルトラスティ東京ベイサイド<br>
+        〒135-0063<br>
+        東京都江東区有明3-1-15<br>
+        TEL：03-6700-0001<br>
+        FAX：03-6700-0007
+      </li>
+    </ul>
 
-    <!-- sitemap -->
-    <p class="copyright"><small>Copyright &copy; RESORTTRUST All rights reserved.</small></p>
+  </div>
+
+<!-- sitemap -->
+
+  <p class="copyright"><small>Copyright &copy; RESORTTRUST All rights reserved.</small></p>
+
   </footer>
 
+</div>
+</div>
 
-  </body>
-  </html>
+</body>
+</html>
+
+<!--
+         ∧＿∧
+   ／＼（　・∀・）／ヽ
+ （ ●　と　　　つ　● ）
+   ＼/⊂、　 　ノ　＼ノ
+        し’
+
+Thank you for your checking HTML!
+-->
