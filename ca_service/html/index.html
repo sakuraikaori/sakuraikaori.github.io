@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>CyberAgent Service</title>
+
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link href="js/jquery.bxslider.css" rel="stylesheet"/>
+
+  <script src="js/jquery-1.11.3.min.js"></script>
+  <script src="js/jquery.bxslider.min.js"></script>
+
+  <script>
+
+  $(function(){
+
+    // サーチ用のフラグをたてる。最初はtrue
+    var flagSearch = true;
+    // サーチをクリックしたら
+    $('.search').on('click',function(){
+      if(flagSearch == true){
+        // もしフラグがtrueだったら
+        // アニメートで飛び出てくる
+        $(this).animate({'right':0},500);
+        flagSearch = false;  //フラグをfalseにかえる
+      } else{
+        // もしフラグがfalseだったら
+        // アニメートでひっこむ
+        $(this).animate({'right':'-420px'},500);
+        flagSearch = true;  //フラグをtrueにかえる
+      }
+    });
+
+    // デバイス用のフラグをたてる。最初はtrue
+    var flagPlus = true;
+    // デバイスをクリックしたら
+    $('.device').on('click',function(){
+      if(flagPlus == true){
+        // もしフラグがtrueだったら
+        // ボタンが飛び出てくる
+        $('.pc').fadeIn();
+        $('.tb').delay(100).fadeIn();
+        $('.sp').delay(200).fadeIn();
+        flagPlus = false; //フラグをfalseにかえる
+      } else{
+        // もしフラグがfalseだったら
+        // ボタンがひっこむ
+        $('.pc').delay(200).fadeOut();
+        $('.tb').delay(100).fadeOut();
+        $('.sp').fadeOut();
+        flagPlus = true;//フラグをtrueにもどす
+      }
+    });
+  });
+
+
+  $(function(){
+    // 初期位置へ移動
+  	$('.nav span').css({
+  		width: $('.nav .current').outerWidth(),
+  		left: $('.nav .current').position().left
+  	});
+
+
+    // 下のバーを変数に保存
+    var navSpan = $('.nav span');
+
+  	// マウスオーバーでアニメーション
+  	$('.nav a').mouseover(function(){
+
+      // 左からのポジション
+      var posX =$(this).position().left;
+      console.log(posX);
+
+      // 条件分岐　座標を左からの計算する
+      if (posX >= 0 && posX < 200){
+        // X座標0から69pxの間
+        $(navSpan).css({'background-color':'#e60012'});
+      } else if (posX >= 200 && posX < 400){
+        $(navSpan).css({'background-color':'#ffb400'});
+      } else if (posX >= 401 && posX < 600){
+        $(navSpan).css({'background-color':'#8fc31f'});
+      } else if (posX >= 601 && posX < 800){
+        $(navSpan).css({'background-color':'#00b7ee'});
+      }
+
+      // 下のバーがアニメーション
+  		$(navSpan).stop().animate({
+  			width: $(this).outerWidth(),
+  			left: posX
+      },'fast');
+  	});
+
+  });
+
+  $(function(){
+  	$('#slider').bxSlider({
+  		auto:true,
+  		minSlides: 5,
+  		maxSlides: 5,
+  		speed: 50000,
+  		ticker: true,
+      slideWidth: 1170,
+      infiniteLoop: true,
+      pager: true,
+      controls: true
+  	});
+  });
+
+  $(function() {
+    var showFlag = false;
+    var topBtn = $('#page-top');
+    topBtn.css('bottom', '10px');
+    var showFlag = false;
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 100) {
+            if (showFlag == false) {
+                showFlag = true;
+                topBtn.stop().animate({'bottom' : '0'}, 200);
+            }
+        } else {
+            if (showFlag) {
+                showFlag = false;
+                topBtn.stop().animate({'bottom' : '-100px'}, 200);
+            }
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+  });
+
+  </script>
+
+</head>
+
+<body>
+
+  <header>
+
+    <div class="header-wrap">
+      <section class="logo">
+        <h1><a href="index.html"><img src="img/logo.png" alt="CyberAgent Service ロゴ"/></a></h1>
+      </section>
+
+  <!-- site logo -->
+
+    <div class="wapNav">
+
+      <div class="nav">
+
+        <a href="#" class="current"><img src="img/gnav_ameba.png" alt="アメーバピグ"></a>
+        <a href="#"><img src="img/gnav_comunity.png" alt="コミュニティ"></a>
+        <a href="#"><img src="img/gnav_game.png.png" alt="ゲーム"></a>
+        <a href="#"><img src="img/gnav_culation.png" alt="キュレーション"></a>
+        <span></span>
+
+      </div>
+
+    </div>
+
+      <div class="nav-bg"></div>
+
+    </div>
+
+    <!-- gnav -->
+
+    <div class="pattern"></div>
+
+      <video src="media/servicemad.mp4" autoplay loop>
+        <img src="img/movie_bg.png" alt="Placeholder">
+      </video>
+
+<!-- movie -->
+
+    <div class="main">
+
+      <h2 class="copy" ><img src="img/copy.png" alt="自分の「好き」が見つかる。新しい「好き」を見つける。"></h2>
+
+<!-- title copy -->
+
+      <div class="pickup">
+
+        <p>
+          <a href="#"><img src="img/pickup_littlenoa.png" alt="ピックアップ リトルノア"></a>
+        </p>
+
+<!--自動切り替え
+
+        <p>
+          <a href="#"><img src="img/pickup_spotlight.png" alt="ピックアップ スポットライト"></a>
+        </p>
+
+        <p>
+          <a href="#"><img src="img/pickup_glanblue.png" alt="ピックアップ グランブルーファンタジー"></a>
+        </p>
+
+        <p>
+          <a href="#"><img src="img/pickup_ownd.png" alt="ピックアップ Ameba Ownd"></a>
+        </p>
+
+-->
+
+      </div>
+
+<!-- service-pickup -->
+
+    </div>
+
+    <div class="keyward-text"><img src="img/keyward_text.png" alt="キーワードから探す"></div>
+
+    <div class="search"><img src="img/search_bar.png" alt="検索バー"></div>
+
+<!-- search-bar -->
+
+    <div class="device-text"><img src="img/device_text.png" alt="デバイスから選ぶ"></div>
+
+    <div class="device"><img src="img/device_plus.png" alt="デバイス別ボタン"></div>
+
+<!-- device-btn -->
+
+    <div class="device-minus"><img src="img/device_minus.png" alt="デバイス別ボタン閉じる"></div>
+
+    <div class="pc"><a href="#"><img src="img/device_pc.png" alt="デバイス別パソコン"></a></div>
+
+    <div class="tb"><a href="#"><img src="img/device_tb.png" alt="デバイス別タブレット"></a></div>
+
+    <div class="sp"><a href="#"><img src="img/device_sp.png" alt="デバイス別タブレット"></a></div>
+
+<!-- device-btn hover -->
+
+  </header>
+<!-- header -->
+
+  <div class="contents">
+
+    <div class="grid-bg">
+      <div class="contents-wrap">
+
+        <section class="service">
+
+          <h3 class="service-text"><img src="img/service_text.png" alt="サービス一覧"/></h3>
+
+          <div class="service-box">
+
+            <div id="slider">
+
+              <div class="service-set">
+                <p class="ownd">
+                  <a href="#"><img src="img/ownd.png" alt="Ameba Ownd"></a>
+                </p>
+                <p>Ameba Ownd</p>
+              </div>
+
+              <div class="service-set">
+                <p class="littlenoa">
+                  <a href="#"><img src="img/littlenoa.png" alt="リトルノア"></a>
+                </p>
+                  <p>リトルノア</p>
+              </div>
+
+              <div class="service-set">
+                <p class="pigparty">
+                  <a href="#"><img src="img/pigparty.png" alt="ピグパーティ"></a>
+                </p>
+                <p>ピグパーティ</p>
+              </div>
+
+              <div class="service-set">
+                <p class="granblue">
+                  <a href="#"><img src="img/granblue.png" alt="グランブルーファンタジー"></a>
+                </p>
+                <p>グランブルーファンタジー</p>
+              </div>
+
+              <div class="service-set">
+                <p class="spotlight">
+                  <a href="#"><img src="img/spotlight.png" alt="Spotlight"></a>
+                </p>
+                <p>Spotlight</p>
+              </div>
+
+              <div class="service-set">
+                <p class="s755">
+                  <a href="#"><img src="img/755.png" alt="755"></a>
+                </p>
+                  <p>755</p>
+              </div>
+
+              <div class="service-set">
+                <p class="bf">
+                  <a href="#"><img src="img/bf.png" alt="ボーイフレンド（仮）"></a>
+                </p>
+                <p>ボーイフレンド（仮）</p>
+              </div>
+
+              <div class="service-set">
+                <p class="gf">
+                  <a href="#"><img src="img/gf.png" alt="ガールフレンド（仮）"></a>
+                </p>
+                <p>ガールフレンド（仮）</p>
+              </div>
+
+              <div class="service-set">
+                <p class="makuake">
+                  <a href="#"><img src="img/makuake.png" alt="Makuake"></a>
+                </p>
+                <p>Makuake</p>
+              </div>
+
+              <div class="service-set">
+                <p class="awa">
+                  <a href="#"><img src="img/awa.png" alt="AWA"></a>
+                </p>
+                <p>AWA</p>
+              </div>
+
+            </div>
+
+          </div>
+
+        </section>
+
+        <section class="topics">
+
+          <h3><img src="img/topics_text.png" alt="最新のトピックス"/></h3>
+
+            <div class="topics-box topics01">
+
+                <img src="img/topics01.png" alt="うちの姫さまがいちばんカワイイ"/>
+                <dl>
+                  <dt class="day">21.May.2015</dt>
+                    <dd class="label"><img src="img/label_game.png" alt="ゲーム"/></dd>
+                    <dd class="title-game">ウチの姫さまがいちばんカワイイ</dd>
+                    <dd class="topics-text">スマートフォン向けニュースアプリ「ハッカドール」とコラボレーション企画を実施</dd>
+                    <dd class="topics-more"><a>続きを見る ▼</a></dd>
+                </dl>
+
+            </div>
+
+            <div class="topics-box topics02">
+
+              <img src="img/topics02.png" alt="AWA"/>
+                <dl>
+                  <dt class="day">21.May.2015</dt>
+                    <dd class="label"><img src="img/label_etc.png" alt="その他"/></dd>
+                    <dd class="title-etc">AWA</dd>
+                    <dd class="topics-text">2015年5月27日（水）より提供開始を実施</dd>
+                    <dd class="topics-more"><a>続きを見る ▼</a></dd>
+                </dl>
+
+            </div>
+
+            <div class="topics-box topics03">
+
+              <img src="img/topics03.png" alt="プリンセスコネクト！"/>
+                <dl>
+                  <dt class="day">21.May.2015</dt>
+                    <dd class="label"><img src="img/label_game.png" alt="ゲーム"/></dd>
+                    <dd class="title-game">プリンセスコネクト！</dd>
+                    <dd class="topics-text">ニコニコ生放送番組 「優歌と樹里のプリンセスチャンネル」を開始</dd>
+                    <dd class="topics-more"><a>続きを見る ▼</a></dd>
+                </dl>
+
+            </div>
+
+          <div class="more">
+
+            <a href="#"><img src="img/more_text.png" alt="トピックスをもっと見る"/></a>
+
+          </div>
+
+          </section>
+<!-- topics -->
+
+        <div>
+      </div>
+    </div>
+  </div>
+
+<p id="page-top"><a href="#wrap"><img src="img/arrow_top.gif" alt="トップに戻る"/>TOP</a></p>
+
+</div>
+
+<!-- contents -->
+
+<footer>
+
+  <div>
+
+    <ul>
+      <li><a href="#">サイトマップ</a></li>
+      <li><a href="#">プライバシーポリシー</a></li>
+      <li><a href="#">ディスクロージャーポリシー</a></li>
+      <li><a href="#">サイトご利用方法</a></li>
+      <li><a href="#">免責事項</a></li>
+    </ul>
+
+<!-- footer nav -->
+
+    <a href="#"><img src="img/official_logo.png" alt="CyberAgent公式サイト"/></a>
+
+    <p class="copyright"><small>Copyright &copy; CyberAgent, Inc. All Rights Reserved.</small></p>
+
+<!-- copyright -->
+
+  </div>
+
+</footer>
+
+</body>
+</html>
